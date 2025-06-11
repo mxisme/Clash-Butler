@@ -71,92 +71,113 @@ dns:
   - https://doh.pub/dns-query
   - https://dns.alidns.com/dns-query
 proxies:
-- name: FR_Ivry-sur-Seine_Online S.A.S._OpenAI
+- name: 51.159.111.32_OpenAI
   password: dongtaiwang.com
-  port: 59967
-  server: 195.154.33.70
+  port: 31180
+  server: 51.159.111.32
+  skip-cert-verify: true
+  sni: apple.com
+  type: hysteria2
+- name: CA_Toronto_HostPapa_OpenAI1
+  network: ws
+  port: 443
+  server: c1swer.777159.xyz
+  servername: c1swER.777159.xYz
+  tls: true
+  type: vless
+  udp: true
+  uuid: cad5a49f-14e5-4a05-aae9-c5df8fad394f
+  ws-opts:
+    headers:
+      Host: c1swer.777159.xyz
+    path: /M31AlZi4vavXqXENw4Z4
+- name: CA_Toronto_HostPapa_OpenAI2
+  network: ws
+  port: 443
+  server: 104.21.14.54
+  servername: c1swER.777159.xYz
+  tls: true
+  type: vless
+  udp: true
+  uuid: cad5a49f-14e5-4a05-aae9-c5df8fad394f
+  ws-opts:
+    headers:
+      Host: c1swer.777159.xyz
+    path: /M31AlZi4vavXqXENw4Z4
+- name: SG_Singapore_Oracle Corporation_OpenAI
+  password: c0b2490e-2625-4b9c-b766-50fff8b92a21
+  port: 35000
+  server: 140.245.35.78
+  skip-cert-verify: true
+  sni: www.apple.com
+  type: hysteria2
+- name: US_Buffalo_Cloudflare, Inc._OpenAI
+  network: ws
+  port: 443
+  server: aq.oldcloud.online
+  servername: aq.oldcloud.online
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: ae20b743-9c67-4ba9-86f5-116a4a838b12
+  ws-opts:
+    headers:
+      Host: aq.oldcloud.online
+    path: /aq
+- name: US_Chicago_Cloudflare, Inc._OpenAI
+  password: b72ba5d5-2d5e-45b7-93b5-236d343baa7c
+  port: 47262
+  server: 64.181.207.162
   skip-cert-verify: true
   sni: www.bing.com
   type: hysteria2
-- name: HK_Hong Kong_Alibaba (US) Technology Co., Ltd._OpenAI
+- name: US_Chicago_Oracle Corporation_OpenAI
   network: ws
-  port: 80
-  server: 45.131.5.206
-  servername: gozargah.validbv7996.ir
-  tls: false
+  port: 443
+  server: 91.201.113.193
+  servername: 0926.qiang2000.link
+  skip-cert-verify: true
+  tls: true
   type: vless
   udp: true
-  uuid: c5293efa-28f8-4a0f-8f34-541078970cee
+  uuid: 1a79d43f-b41c-496b-a241-dcbeefa81f0e
   ws-opts:
     headers:
-      Host: gozargah.validbv7996.ir
-    path: /Telegram🇨🇳@WangCai2
-- cipher: aes-256-cfb
-  name: JP_Tokyo_Amazon Technologies Inc._OpenAI1
-  password: amazonskr05
+      Host: 0926.qiang2000.link
+    path: /Telegram🇨🇳@WangCai2/?ed=2560
+- name: US_Los Angeles_Psychz Networks_OpenAI
+  password: b8bd42a9-551f-419d-b70d-4aefdd2cb074
   port: 443
-  server: 52.197.57.24
-  type: ss
-- cipher: aes-256-cfb
-  name: JP_Tokyo_Amazon Technologies Inc._OpenAI2
-  password: amazonskr05
-  port: 443
-  server: 52.199.237.27
-  type: ss
-- cipher: aes-256-cfb
-  name: SG_Singapore_Amazon Technologies Inc._OpenAI
-  password: amazonskr05
-  port: 443
-  server: 13.229.210.217
-  type: ss
-- cipher: aes-256-cfb
-  name: SG_Singapore_Amazon.com, Inc._OpenAI
-  password: amazonskr05
-  port: 443
-  server: 13.250.5.171
-  type: ss
-- name: US_Portland_Amazon.com, Inc._OpenAI
+  server: 108.181.23.255
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+- name: US_Los Angeles_Sharktech1
+  password: 4d631e24-97f7-11ea-8fc9-f23c913c8d2b
+  port: 8443
+  server: 4cd59326-sxc9s0-t1qkm7-lwn9.hy2.gotochinatown.net
+  sni: 4cd59326-sxc9s0-t1qkm7-lwn9.hy2.gotochinatown.net
+  type: hysteria2
+- name: US_Los Angeles_Sharktech2
+  password: 9cc3c03e-21fd-11ee-a642-f23c91369f2d
+  port: 8443
+  server: d5a9f8af-swd340-syfwbx-1k0yf.hy2.gotochinatown.net
+  sni: d5a9f8af-swd340-syfwbx-1k0yf.hy2.gotochinatown.net
+  type: hysteria2
+- alterId: 0
+  cipher: auto
+  name: github.com/Ruk1ng001_
   network: ws
   port: 80
-  server: 45.131.5.27
-  servername: gozargah.validbv7996.ir
+  server: xxcvfrrt6.999820.xyz
+  skip-cert-verify: false
   tls: false
-  type: vless
-  uuid: c5293efa-28f8-4a0f-8f34-541078970cee
+  type: vmess
+  uuid: 90f357dd-79ac-47c6-b0b8-958e2d19de07
   ws-opts:
     headers:
-      Host: gozargah.validbv7996.ir
-    path: /Telegram🇨🇳 @MxlShare@WangCai2
-- flow: xtls-rprx-vision
-  name: github.com/Ruk1ng001_1
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-    short-id: 1a
-  server: t9.qifei.app
-  servername: www.amazon.com
-  tls: true
-  type: vless
-  uuid: ef23ddd0-14c5-39c2-9880-af55ce892363
-- flow: xtls-rprx-vision
-  name: github.com/Ruk1ng001_2
-  network: tcp
-  port: 1443
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-    short-id: 1a
-  server: t14.qifei.app
-  servername: www.amazon.com
-  tls: true
-  type: vless
-  uuid: ef23ddd0-14c5-39c2-9880-af55ce892363
-- cipher: aes-256-cfb
-  name: ❓_🇸🇬_💼_github.com/Ruk1ng001_
-  password: amazonskr05
-  port: 443
-  server: 13.229.48.116
-  type: ss
+      Host: xxcvfrrt6.999820.xyz
+    path: /10W6SJaK0F0oVXeNU6S2RVRP
 proxy-groups:
 - name: PROXY
   type: select
@@ -172,16 +193,17 @@ proxy-groups:
   type: select
   filter: .*
   proxies:
-  - FR_Ivry-sur-Seine_Online S.A.S._OpenAI
-  - HK_Hong Kong_Alibaba (US) Technology Co., Ltd._OpenAI
-  - JP_Tokyo_Amazon Technologies Inc._OpenAI1
-  - JP_Tokyo_Amazon Technologies Inc._OpenAI2
-  - SG_Singapore_Amazon Technologies Inc._OpenAI
-  - SG_Singapore_Amazon.com, Inc._OpenAI
-  - US_Portland_Amazon.com, Inc._OpenAI
-  - github.com/Ruk1ng001_1
-  - github.com/Ruk1ng001_2
-  - ❓_🇸🇬_💼_github.com/Ruk1ng001_
+  - 51.159.111.32_OpenAI
+  - CA_Toronto_HostPapa_OpenAI1
+  - CA_Toronto_HostPapa_OpenAI2
+  - SG_Singapore_Oracle Corporation_OpenAI
+  - US_Buffalo_Cloudflare, Inc._OpenAI
+  - US_Chicago_Cloudflare, Inc._OpenAI
+  - US_Chicago_Oracle Corporation_OpenAI
+  - US_Los Angeles_Psychz Networks_OpenAI
+  - US_Los Angeles_Sharktech1
+  - US_Los Angeles_Sharktech2
+  - github.com/Ruk1ng001_
 - name: Fallback
   type: fallback
   url: http://www.google.com/generate_204
@@ -198,7 +220,7 @@ proxy-groups:
   interval: 600
   tolerance: 2000
   proxies:
-  - HK_Hong Kong_Alibaba (US) Technology Co., Ltd._OpenAI
+  - DIRECT
   filter: (?i)港|HK|HongKong|hong kong
 - name: TW
   type: url-test
@@ -214,8 +236,7 @@ proxy-groups:
   interval: 600
   tolerance: 2000
   proxies:
-  - JP_Tokyo_Amazon Technologies Inc._OpenAI1
-  - JP_Tokyo_Amazon Technologies Inc._OpenAI2
+  - DIRECT
   filter: (?i)日|东京|大阪|JP|Japan|Tokyo|Osaka|Saitama
 - name: SG
   type: url-test
@@ -223,8 +244,7 @@ proxy-groups:
   interval: 600
   tolerance: 2000
   proxies:
-  - SG_Singapore_Amazon Technologies Inc._OpenAI
-  - SG_Singapore_Amazon.com, Inc._OpenAI
+  - SG_Singapore_Oracle Corporation_OpenAI
   filter: (?i)新|狮城|SG|Singapore
 - name: US
   type: url-test
@@ -232,8 +252,12 @@ proxy-groups:
   interval: 600
   tolerance: 2000
   proxies:
-  - HK_Hong Kong_Alibaba (US) Technology Co., Ltd._OpenAI
-  - US_Portland_Amazon.com, Inc._OpenAI
+  - US_Buffalo_Cloudflare, Inc._OpenAI
+  - US_Chicago_Cloudflare, Inc._OpenAI
+  - US_Chicago_Oracle Corporation_OpenAI
+  - US_Los Angeles_Psychz Networks_OpenAI
+  - US_Los Angeles_Sharktech1
+  - US_Los Angeles_Sharktech2
   filter: (?i)美|洛杉矶|芝加哥|西雅图|America|US|United.*?States
 - name: OpenAI
   type: url-test
@@ -241,13 +265,14 @@ proxy-groups:
   interval: 600
   tolerance: 500
   proxies:
-  - FR_Ivry-sur-Seine_Online S.A.S._OpenAI
-  - HK_Hong Kong_Alibaba (US) Technology Co., Ltd._OpenAI
-  - JP_Tokyo_Amazon Technologies Inc._OpenAI1
-  - JP_Tokyo_Amazon Technologies Inc._OpenAI2
-  - SG_Singapore_Amazon Technologies Inc._OpenAI
-  - SG_Singapore_Amazon.com, Inc._OpenAI
-  - US_Portland_Amazon.com, Inc._OpenAI
+  - 51.159.111.32_OpenAI
+  - CA_Toronto_HostPapa_OpenAI1
+  - CA_Toronto_HostPapa_OpenAI2
+  - SG_Singapore_Oracle Corporation_OpenAI
+  - US_Buffalo_Cloudflare, Inc._OpenAI
+  - US_Chicago_Cloudflare, Inc._OpenAI
+  - US_Chicago_Oracle Corporation_OpenAI
+  - US_Los Angeles_Psychz Networks_OpenAI
   filter: (?i)OpenAI
 - name: Claude
   type: url-test
