@@ -71,40 +71,43 @@ dns:
   - https://doh.pub/dns-query
   - https://dns.alidns.com/dns-query
 proxies:
-- name: FR_Paris_SCALEWAY_OpenAI
-  password: dongtaiwang.com
-  port: 31180
-  server: 51.159.111.32
-  skip-cert-verify: true
-  sni: apple.com
-  type: hysteria2
-- flow: xtls-rprx-vision
-  name: JP_Tokyo_Amazon Technologies Inc._OpenAI
+- name: US_Buffalo_HostPapa_OpenAI
   network: tcp
+  port: 42884
+  server: 107.172.76.33
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  udp: true
+  uuid: 24dc98f9-14ba-4f02-9159-153f8efc5224
+- alterId: 0
+  cipher: auto
+  name: US_Los Angeles_HostPapa_OpenAI
+  network: ws
   port: 443
-  reality-opts:
-    public-key: GbWTeH8a_C8FLKqJ2hyuoY77WsSQIJschXB16usasCg
-    short-id: 7a2b
-  server: 18.181.83.90
-  servername: zula.ir
+  server: 1.apskel.shop
+  servername: 1.apskel.shop
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 856ef1b6-dfe9-4e20-ffcd-96c2aa5aa01b
+  ws-opts:
+    headers:
+      Host: 1.apskel.shop
+    path: /pik
+- name: US_Portland_Hosteons Pte. Ltd._OpenAI
+  network: ws
+  port: 8443
+  server: test.dzli94.sbs
+  servername: test.dzli94.sbs
   skip-cert-verify: false
   tls: true
   type: vless
-  uuid: 7f93e196-1b2f-4a42-8051-5815554c05db
-- name: US_Chicago_Cloudflare, Inc._OpenAI
-  password: b72ba5d5-2d5e-45b7-93b5-236d343baa7c
-  port: 47262
-  server: 64.181.207.162
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-- name: US_Los Angeles_Cogent Communications_OpenAI
-  password: aaf7a87d-ef38-433e-b86e-07ddea14fac4
-  port: 55462
-  server: 154.21.206.251
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
+  uuid: e6a83c8d-5330-4af1-ad33-f78e3e782e74
+  ws-opts:
+    headers:
+      Host: test.dzli94.sbs
+    path: /5330
 proxy-groups:
 - name: PROXY
   type: select
@@ -120,10 +123,9 @@ proxy-groups:
   type: select
   filter: .*
   proxies:
-  - FR_Paris_SCALEWAY_OpenAI
-  - JP_Tokyo_Amazon Technologies Inc._OpenAI
-  - US_Chicago_Cloudflare, Inc._OpenAI
-  - US_Los Angeles_Cogent Communications_OpenAI
+  - US_Buffalo_HostPapa_OpenAI
+  - US_Los Angeles_HostPapa_OpenAI
+  - US_Portland_Hosteons Pte. Ltd._OpenAI
 - name: Fallback
   type: fallback
   url: http://www.google.com/generate_204
@@ -156,7 +158,7 @@ proxy-groups:
   interval: 600
   tolerance: 2000
   proxies:
-  - JP_Tokyo_Amazon Technologies Inc._OpenAI
+  - DIRECT
   filter: (?i)日|东京|大阪|JP|Japan|Tokyo|Osaka|Saitama
 - name: SG
   type: url-test
@@ -172,8 +174,9 @@ proxy-groups:
   interval: 600
   tolerance: 2000
   proxies:
-  - US_Chicago_Cloudflare, Inc._OpenAI
-  - US_Los Angeles_Cogent Communications_OpenAI
+  - US_Buffalo_HostPapa_OpenAI
+  - US_Los Angeles_HostPapa_OpenAI
+  - US_Portland_Hosteons Pte. Ltd._OpenAI
   filter: (?i)美|洛杉矶|芝加哥|西雅图|America|US|United.*?States
 - name: OpenAI
   type: url-test
@@ -181,10 +184,9 @@ proxy-groups:
   interval: 600
   tolerance: 500
   proxies:
-  - FR_Paris_SCALEWAY_OpenAI
-  - JP_Tokyo_Amazon Technologies Inc._OpenAI
-  - US_Chicago_Cloudflare, Inc._OpenAI
-  - US_Los Angeles_Cogent Communications_OpenAI
+  - US_Buffalo_HostPapa_OpenAI
+  - US_Los Angeles_HostPapa_OpenAI
+  - US_Portland_Hosteons Pte. Ltd._OpenAI
   filter: (?i)OpenAI
 - name: Claude
   type: url-test
